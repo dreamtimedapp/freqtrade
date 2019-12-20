@@ -25,7 +25,7 @@ def setup_configuration(args: Dict[str, Any], method: RunMode) -> Dict[str, Any]
     return config
 
 
-def start_backtesting(args: Dict[str, Any]) -> None:
+def start_backtesting(args: Dict[str, Any]):
     """
     Start Backtesting script
     :param args: Cli args from Arguments()
@@ -41,7 +41,7 @@ def start_backtesting(args: Dict[str, Any]) -> None:
 
     # Initialize backtesting object
     backtesting = Backtesting(config)
-    backtesting.start()
+    return backtesting.start()
 
 
 def start_hyperopt(args: Dict[str, Any]) -> None:
