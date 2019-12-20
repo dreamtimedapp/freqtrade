@@ -33,6 +33,8 @@ def start_backtesting(args: Dict[str, Any]):
     """
     # Import here to avoid loading backtesting module when it's not used
     from freqtrade.optimize.backtesting import Backtesting
+    
+    print("canshu:" + str(args))
 
     # Initialize configuration
     config = setup_configuration(args, RunMode.BACKTEST)
