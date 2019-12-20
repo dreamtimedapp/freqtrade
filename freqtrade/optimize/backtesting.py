@@ -453,7 +453,7 @@ class Backtesting:
             tmp += timedelta(minutes=self.timeframe_min)
         return DataFrame.from_records(trades, columns=BacktestResult._fields)
 
-    def start(self) -> None:
+    def start(self):
         """
         Run a backtesting end-to-end
         :return: None
@@ -520,3 +520,4 @@ class Backtesting:
             print(' Strategy Summary '.center(133, '='))
             print(self._generate_text_table_strategy(all_results))
             print('\nFor more details, please look at the detail tables above')
+        return all_results
