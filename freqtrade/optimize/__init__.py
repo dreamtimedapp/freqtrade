@@ -45,9 +45,9 @@ def start_backtesting(args: Dict[str, Any]):
 
     # Initialize backtesting object
     backtesting = Backtesting(config)
-    reuslt = backtesting.start()
+    result = backtesting.start()
     print(result.to_string())
-    return reuslt
+    return result
 
 
 def start_hyperopt(args: Dict[str, Any]) -> None:
