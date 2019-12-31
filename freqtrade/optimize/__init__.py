@@ -38,12 +38,16 @@ def start_backtesting(args: Dict[str, Any]):
 
     # Initialize configuration
     config = setup_configuration(args, RunMode.BACKTEST)
+    
+    print("后面config内容修改:" + str(args))
 
     logger.info('Starting freqtrade in Backtesting mode')
 
     # Initialize backtesting object
     backtesting = Backtesting(config)
-    return backtesting.start()
+    reuslt = backtesting.start()
+    print(result.to_string())
+    return reuslt
 
 
 def start_hyperopt(args: Dict[str, Any]) -> None:
