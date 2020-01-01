@@ -46,7 +46,6 @@ def start_backtesting(args: Dict[str, Any]):
     # Initialize backtesting object
     backtesting = Backtesting(config)
     result = backtesting.start()
-    print(result.to_string())
     return result
 
 
